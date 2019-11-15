@@ -1,0 +1,65 @@
+.about {
+  @include center-xy;
+  display: grid;
+  max-width: 48rem;
+  grid-gap: 2rem;
+  grid-template-columns: 10rem 1fr;
+}
+
+.about__wrapper {
+  position: relative;
+  height: 48rem;
+  background: white;
+  margin: 0 auto;
+}
+
+.about__bio {
+  @include bst-wide;
+  font-size: 1.6rem;
+  align-self: center;
+}
+
+.about__image {
+  display: block;
+  @include bg-image('checkers-purple.png');
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  background-size: cover;
+}
+
+@media (max-width: $mobile) {
+  .about {
+    position: static;
+    transform: none;
+    padding: 2rem;
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+  }
+  
+  .about__wrapper {
+    position: relative;
+    height: auto;
+    background: white;
+    margin: 0 auto;
+  }
+  
+  .about__bio {
+    @include bst-wide;
+    font-size: 1.6rem;
+    align-self: center;
+  }
+  
+  .about__image {
+    margin: 0 auto 2rem auto;
+    @include bg-image('checkers-purple.png');
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    background-size: cover;
+  }
+
+  .section__title {
+    display: none;
+  }
+}

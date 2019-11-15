@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{fill:#1E1E1E;}
+</style>
+<g id="Base" class="st0">
+</g>
+<g id="Eye">
+	<path class="st1" d="M512,448L384,320v64l104,104v120l24,24l24-24v-56l104-104V320L512,448z M608,432l-64,64v-32l64-64V432z"/>
+</g>
+</svg>

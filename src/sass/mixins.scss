@@ -1,0 +1,36 @@
+@mixin bg-image($path) {
+  background: {
+    image: url(#{$imagesDir}#{$path});
+    position: center;
+    repeat: no-repeat;
+  }
+}
+
+@mixin center-x {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@mixin center-y {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+@mixin center-xy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin bst {
+  font-family: 'Big Shoulders Text', sans-serif;
+}
+
+@mixin bst-wide {
+  font-family: 'Big Shoulders Text', sans-serif;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+}

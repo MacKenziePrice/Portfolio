@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.banner__button {
+  font-family: "Big Shoulders Text", sans-serif;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  bottom: 15rem;
+  height: 3.5rem;
+  padding: 0 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+  cursor: pointer;
+}
+
+.banner-vh {
+  height: 100vh;
+}
+
+.project-vh {
+  height: 100vh;
+}
+
+.section__title {
+  font-family: "Big Shoulders Text", sans-serif;
+  padding-top: 5rem;
+  font-size: 2.8rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  max-width: 48rem;
+  grid-gap: 2rem;
+  grid-template-columns: 10rem 1fr;
+}
+
+.about__wrapper {
+  position: relative;
+  height: 48rem;
+  background: white;
+  margin: 0 auto;
+}
+
+.about__bio {
+  font-family: "Big Shoulders Text", sans-serif;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  align-self: center;
+}
+
+.about__image {
+  display: block;
+  background-image: url(/checkers-purple.51aceeca.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  background-size: cover;
+}
+
+@media (max-width: 640px) {
+  .about {
+    position: static;
+    transform: none;
+    padding: 2rem;
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .about__wrapper {
+    position: relative;
+    height: auto;
+    background: white;
+    margin: 0 auto;
+  }
+
+  .about__bio {
+    font-family: "Big Shoulders Text", sans-serif;
+    letter-spacing: 0.05rem;
+    line-height: 1.5;
+    font-size: 1.6rem;
+    align-self: center;
+  }
+
+  .about__image {
+    margin: 0 auto 2rem auto;
+    background-image: url(/checkers-purple.51aceeca.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    background-size: cover;
+  }
+
+  .section__title {
+    display: none;
+  }
+}
+.banner {
+  background: lightcoral;
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  width: 5rem;
+  height: 3.5rem;
+  cursor: pointer;
+}
+.hamburger .hamburger__stack:nth-child(2) {
+  top: 1.5rem;
+}
+.hamburger .hamburger__stack:nth-child(3) {
+  top: 3rem;
+}
+
+.hamburger__stack {
+  display: block;
+  position: absolute;
+  width: 5rem;
+  height: 0.5rem;
+  background: white;
+  border-radius: 0.25rem;
+  transition: ease-out 100ms;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  height: 20rem;
+  line-height: 20rem;
+}
+
+.logo {
+  z-index: 10;
+  position: absolute;
+  top: 7.5rem;
+  left: 10rem;
+  height: 5rem;
+  cursor: pointer;
+}
+
+.main-menu {
+  position: absolute;
+  width: 100%;
+  text-align: right;
+}
+
+.main-menu a:nth-child(2) {
+  margin-right: 10rem;
+}
+
+.main-menu__item {
+  display: inline;
+  margin: 0 2rem;
+  font-family: "Big Shoulders Text", sans-serif;
+  font-size: 2.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger .hamburger__stack.active:nth-child(1) {
+    transform: translateY(15px) rotate(45deg);
+  }
+  .hamburger .hamburger__stack.active:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger .hamburger__stack.active:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+  }
+
+  .logo {
+    top: 5rem;
+    right: 5rem;
+    left: auto;
+  }
+
+  .main-menu {
+    position: absolute;
+    top: 8rem;
+    left: -100%;
+    width: 100%;
+    height: auto;
+    padding: 5rem 0;
+    background: #141414;
+    transition: ease-out 200ms;
+  }
+  .main-menu .main-menu__item:nth-child(2) {
+    margin-right: 0;
+  }
+  .main-menu .main-menu__item:nth-child(3) {
+    margin-left: 0;
+  }
+
+  .main-menu__item {
+    display: block;
+    height: 5rem;
+    margin: 0;
+    line-height: 5rem;
+    transition: ease-out 200ms;
+  }
+
+  .main-menu.active {
+    left: 0;
+    transition: ease-out 200ms;
+  }
+}
+.cc {
+  font-family: "Big Shoulders Text", sans-serif;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+  font-size: 1.4;
+}
+
+.project {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  width: 128rem;
+  margin: 0 auto 5rem auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+.projects {
+  position: relative;
+  background: #f0f0f0;
+}
+
+.project__description {
+  margin-bottom: 2rem;
+  font-family: "Big Shoulders Text", sans-serif;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+.project__image {
+  width: 64rem;
+  height: 36rem;
+  background-size: cover;
+}
+
+.project__info {
+  padding: 0 2rem;
+  background: #f0f0f0;
+}
+
+.project__subtitle {
+  font-family: "Big Shoulders Text", sans-serif;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.project__title {
+  font-family: "Big Shoulders Text", sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.project__url {
+  font-family: "Big Shoulders Text", sans-serif;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+  position: absolute;
+  bottom: 2rem;
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .project {
+    position: static;
+    width: 100%;
+    grid-template-columns: 1fr;
+    transform: none;
+  }
+
+  .project__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .project__info {
+    padding: 2rem;
+  }
+
+  .project__url {
+    position: static;
+  }
+
+  .project-vh {
+    height: auto;
+  }
+
+  .projects {
+    position: relative;
+  }
+
+  .section__title {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=/app.581aa3f0.css.map */

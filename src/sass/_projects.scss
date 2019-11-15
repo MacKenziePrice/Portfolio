@@ -1,0 +1,85 @@
+.project {
+  @include center-xy;
+  display: grid;
+  width: 128rem;
+  margin: 0 auto 5rem auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+.projects {
+  position: relative;
+  background: $off-white;
+}
+
+.project__description {
+  margin-bottom: 2rem;
+  @include bst-wide;
+  font-size: 1.6rem;
+}
+
+.project__image {
+  // Use image
+  width: 64rem;
+  height: 36rem;
+  // @include bg-image('checkers-purple.png');
+  background-size: cover;
+}
+
+.project__info {
+  padding: 0 2rem;
+  background: $off-white;
+}
+
+.project__subtitle {
+  @include bst-wide;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.project__title {
+  @include bst;
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.project__url {
+  @include bst-wide;
+  position: absolute;
+  bottom: 2rem;
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+
+@media (max-width: $mobile) {
+  .project {
+    position: static;
+    width: 100%;
+    grid-template-columns: 1fr;
+    transform: none;
+  }
+
+  .project__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .project__info {
+    padding: 2rem;
+  }
+
+  .project__url {
+    position: static;
+  }
+
+  .project-vh {
+    height: auto;
+  }
+
+  .projects {
+    position: relative;
+  }
+
+  .section__title {
+    display: none;
+  }
+}
