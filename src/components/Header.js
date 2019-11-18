@@ -2,23 +2,11 @@ import React from 'react';
 import { Link } from 'react-scroll';
 
 import logo from '../../public/images/foxo5.png';
+import cake from '../scripts/utils.js';
 
 const Header = () => (
   <header>
-    <Link
-        activeClass="active"
-        duration={500}
-        smooth={true}
-        spy={true}
-        to="projects"
-      >
-      <img className="logo" src={logo}/>
-    </Link>
-    <div className="hamburger" id="js-hamburger">
-      <span className="hamburger__stack"></span>
-      <span className="hamburger__stack"></span>
-      <span className="hamburger__stack"></span>
-    </div>
+    <img className="logo" src={logo}/>
     <ul className="main-menu" id="js-main-menu">
       <Link
         activeClass="active"

@@ -25764,8 +25764,8 @@ var About = function About() {
   return _react.default.createElement("div", {
     className: "about__wrapper"
   }, _react.default.createElement("h1", {
-    className: "section__title"
-  }, "ABOUT"), _react.default.createElement("div", {
+    className: "about__title"
+  }, "MacKenzie Meric"), _react.default.createElement("div", {
     className: "about"
   }, _react.default.createElement("div", {
     className: "about__image"
@@ -28762,6 +28762,38 @@ var _default = Banner;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","react-scroll":"../node_modules/react-scroll/modules/index.js"}],"images/foxo5.png":[function(require,module,exports) {
 module.exports = "/foxo5.88cdbf8e.png";
+},{}],"../src/scripts/utils.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var cake = function cake() {
+  var hamburger = document.getElementById('js-hamburger');
+  var menuBars = document.querySelectorAll('.hamburger__stack');
+  var mainMenu = document.getElementById('js-main-menu');
+  console.log(10);
+  hamburger.addEventListener('click', function () {
+    console.log(10);
+
+    if (mainMenu.classList.contains('active')) {
+      mainMenu.classList.remove('active');
+      menuBars.forEach(function (menuBars) {
+        menuBars.classList.remove('active');
+      });
+    } else {
+      mainMenu.classList.add('active');
+      menuBars.forEach(function (menuBars) {
+        menuBars.classList.add('active');
+      });
+    }
+  });
+};
+
+var _default = cake;
+exports.default = _default;
 },{}],"../src/components/Header.js":[function(require,module,exports) {
 "use strict";
 
@@ -28776,28 +28808,15 @@ var _reactScroll = require("react-scroll");
 
 var _foxo = _interopRequireDefault(require("../../public/images/foxo5.png"));
 
+var _utils = _interopRequireDefault(require("../scripts/utils.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Header = function Header() {
-  return _react.default.createElement("header", null, _react.default.createElement(_reactScroll.Link, {
-    activeClass: "active",
-    duration: 500,
-    smooth: true,
-    spy: true,
-    to: "projects"
-  }, _react.default.createElement("img", {
+  return _react.default.createElement("header", null, _react.default.createElement("img", {
     className: "logo",
     src: _foxo.default
-  })), _react.default.createElement("div", {
-    className: "hamburger",
-    id: "js-hamburger"
-  }, _react.default.createElement("span", {
-    className: "hamburger__stack"
-  }), _react.default.createElement("span", {
-    className: "hamburger__stack"
-  }), _react.default.createElement("span", {
-    className: "hamburger__stack"
-  })), _react.default.createElement("ul", {
+  }), _react.default.createElement("ul", {
     className: "main-menu",
     id: "js-main-menu"
   }, _react.default.createElement(_reactScroll.Link, {
@@ -28821,7 +28840,7 @@ var Header = function Header() {
 
 var _default = Header;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-scroll":"../node_modules/react-scroll/modules/index.js","../../public/images/foxo5.png":"images/foxo5.png"}],"../src/components/Footer.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-scroll":"../node_modules/react-scroll/modules/index.js","../../public/images/foxo5.png":"images/foxo5.png","../scripts/utils.js":"../src/scripts/utils.js"}],"../src/components/Footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28834,9 +28853,9 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Footer = function Footer() {
-  return _react.default.createElement("span", {
+  return _react.default.createElement("p", {
     className: "cc"
-  }, "MacKenzie Meric &copy 2019");
+  }, "MacKenzie Meric \xA9 2019");
 };
 
 var _default = Footer;
@@ -29027,7 +29046,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58754" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50328" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -118,24 +118,26 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"../src/scripts/utils.js":[function(require,module,exports) {
-var hamburger = document.getElementById('js-hamburger');
-var menuBars = document.querySelectorAll('.hamburger__stack');
-var mainMenu = document.getElementById('js-main-menu');
-hamburger.addEventListener('click', function () {
+// const hamburger = document.getElementById('js-hamburger');
+// const menuBars = document.querySelectorAll('.hamburger__stack');
+// const mainMenu = document.getElementById('js-main-menu');
+var app = document.getElementById('app');
+app.addEventListener('click', function () {
   console.log(10);
-
-  if (mainMenu.classList.contains('active')) {
-    mainMenu.classList.remove('active');
-    menuBars.forEach(function (menuBars) {
-      menuBars.classList.remove('active');
-    });
-  } else {
-    mainMenu.classList.add('active');
-    menuBars.forEach(function (menuBars) {
-      menuBars.classList.add('active');
-    });
-  }
-});
+}); // hamburger.addEventListener('click', () => {
+//   console.log(10);
+//   if (mainMenu.classList.contains('active')) {
+//     mainMenu.classList.remove('active');
+//     menuBars.forEach((menuBars) => {
+//       menuBars.classList.remove('active');
+//     });
+//   } else {
+//     mainMenu.classList.add('active');
+//     menuBars.forEach((menuBars) => {
+//       menuBars.classList.add('active');
+//     });
+//   }
+// });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -164,7 +166,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58754" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64584" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
